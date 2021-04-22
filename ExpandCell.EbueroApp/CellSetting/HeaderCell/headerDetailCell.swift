@@ -11,6 +11,12 @@ class headerDetailCell: UITableViewCell {
     @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var txDetailHeader: UILabel!
     
+    static let identifier = "headerDetailCell"
+    
+    static func nib() ->UINib {
+        return UINib(nibName: "headerDetailCell", bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

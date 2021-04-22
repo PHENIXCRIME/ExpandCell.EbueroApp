@@ -11,15 +11,18 @@ class settingCell: UITableViewCell {
     @IBOutlet weak var imgSetting: UIImageView!
     @IBOutlet weak var txSetting: NSLayoutConstraint!
     
+    static let identifier = "settingCell"
+    
+    static func nib() ->UINib {
+        return UINib(nibName: "settingCell", bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

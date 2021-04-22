@@ -10,6 +10,12 @@ import UIKit
 class bottomDetailCell: UITableViewCell {
     @IBOutlet weak var txSubSetting: UILabel!
     
+    static let identifier = "bottomDetailCell"
+    
+    static func nib() ->UINib {
+        return UINib(nibName: "bottomDetailCell", bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
