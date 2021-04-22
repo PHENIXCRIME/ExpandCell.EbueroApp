@@ -8,7 +8,8 @@
 import UIKit
 
 class bottomDetailCell: UITableViewCell {
-
+    @IBOutlet weak var txSubSetting: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -8,7 +8,9 @@
 import UIKit
 
 class headerDetailCell: UITableViewCell {
-
+    @IBOutlet weak var imageHeader: UIImageView!
+    @IBOutlet weak var txDetailHeader: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

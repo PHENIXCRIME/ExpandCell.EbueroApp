@@ -8,7 +8,9 @@
 import UIKit
 
 class settingCell: UITableViewCell {
-
+    @IBOutlet weak var imgSetting: UIImageView!
+    @IBOutlet weak var txSetting: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
