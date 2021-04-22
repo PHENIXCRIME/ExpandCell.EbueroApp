@@ -74,14 +74,14 @@
 			children = (
 				669DD9792630255E00A67963 /* AppDelegate.swift */,
 				669DD97B2630255E00A67963 /* SceneDelegate.swift */,
-				66C00C602631511900D6D0FE /* Setting.swift */,
 				669DD97D2630255E00A67963 /* ViewController.swift */,
 				669DD97F2630255E00A67963 /* Main.storyboard */,
 				669DD9852630256000A67963 /* Assets.xcassets */,
+				66C00C602631511900D6D0FE /* Setting.swift */,
+				66C00C722631579A00D6D0FE /* CellSetting */,
 				669DD9872630256000A67963 /* LaunchScreen.storyboard */,
 				669DD98A2630256000A67963 /* Info.plist */,
 				669DD9822630255E00A67963 /* ExpandCell_EbueroApp.xcdatamodeld */,
-				66C00C722631579A00D6D0FE /* CellSetting */,
 			);
 			path = ExpandCell.EbueroApp;
 			sourceTree = "<group>";
