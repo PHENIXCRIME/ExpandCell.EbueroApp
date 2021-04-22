@@ -15,6 +15,12 @@
 		669DD9862630256000A67963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669DD9852630256000A67963 /* Assets.xcassets */; };
 		669DD9892630256000A67963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 669DD9872630256000A67963 /* LaunchScreen.storyboard */; };
 		66C00C612631511900D6D0FE /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C00C602631511900D6D0FE /* Setting.swift */; };
+		66C00C652631572C00D6D0FE /* settingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C00C632631572C00D6D0FE /* settingCell.swift */; };
+		66C00C662631572C00D6D0FE /* settingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C00C642631572C00D6D0FE /* settingCell.xib */; };
+		66C00C6A2631577600D6D0FE /* headerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C00C682631577600D6D0FE /* headerDetailCell.swift */; };
+		66C00C6B2631577600D6D0FE /* headerDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C00C692631577600D6D0FE /* headerDetailCell.xib */; };
+		66C00C6F2631578C00D6D0FE /* bottomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C00C6D2631578C00D6D0FE /* bottomDetailCell.swift */; };
+		66C00C702631578C00D6D0FE /* bottomDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C00C6E2631578C00D6D0FE /* bottomDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		669DD9882630256000A67963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		669DD98A2630256000A67963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66C00C602631511900D6D0FE /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		66C00C632631572C00D6D0FE /* settingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingCell.swift; sourceTree = "<group>"; };
+		66C00C642631572C00D6D0FE /* settingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = settingCell.xib; sourceTree = "<group>"; };
+		66C00C682631577600D6D0FE /* headerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerDetailCell.swift; sourceTree = "<group>"; };
+		66C00C692631577600D6D0FE /* headerDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = headerDetailCell.xib; sourceTree = "<group>"; };
+		66C00C6D2631578C00D6D0FE /* bottomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomDetailCell.swift; sourceTree = "<group>"; };
+		66C00C6E2631578C00D6D0FE /* bottomDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = bottomDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +81,22 @@
 				669DD9872630256000A67963 /* LaunchScreen.storyboard */,
 				669DD98A2630256000A67963 /* Info.plist */,
 				669DD9822630255E00A67963 /* ExpandCell_EbueroApp.xcdatamodeld */,
+				66C00C722631579A00D6D0FE /* CellSetting */,
 			);
 			path = ExpandCell.EbueroApp;
+			sourceTree = "<group>";
+		};
+		66C00C722631579A00D6D0FE /* CellSetting */ = {
+			isa = PBXGroup;
+			children = (
+				66C00C632631572C00D6D0FE /* settingCell.swift */,
+				66C00C642631572C00D6D0FE /* settingCell.xib */,
+				66C00C682631577600D6D0FE /* headerDetailCell.swift */,
+				66C00C692631577600D6D0FE /* headerDetailCell.xib */,
+				66C00C6D2631578C00D6D0FE /* bottomDetailCell.swift */,
+				66C00C6E2631578C00D6D0FE /* bottomDetailCell.xib */,
+			);
+			path = CellSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +156,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C00C6B2631577600D6D0FE /* headerDetailCell.xib in Resources */,
 				669DD9892630256000A67963 /* LaunchScreen.storyboard in Resources */,
 				669DD9862630256000A67963 /* Assets.xcassets in Resources */,
+				66C00C702631578C00D6D0FE /* bottomDetailCell.xib in Resources */,
+				66C00C662631572C00D6D0FE /* settingCell.xib in Resources */,
 				669DD9812630255E00A67963 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C00C652631572C00D6D0FE /* settingCell.swift in Sources */,
+				66C00C6F2631578C00D6D0FE /* bottomDetailCell.swift in Sources */,
 				66C00C612631511900D6D0FE /* Setting.swift in Sources */,
+				66C00C6A2631577600D6D0FE /* headerDetailCell.swift in Sources */,
 				669DD97E2630255E00A67963 /* ViewController.swift in Sources */,
 				669DD9842630255E00A67963 /* ExpandCell_EbueroApp.xcdatamodeld in Sources */,
 				669DD97A2630255E00A67963 /* AppDelegate.swift in Sources */,
