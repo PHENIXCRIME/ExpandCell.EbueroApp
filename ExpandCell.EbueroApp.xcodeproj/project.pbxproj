@@ -89,14 +89,38 @@
 		66C00C722631579A00D6D0FE /* CellSetting */ = {
 			isa = PBXGroup;
 			children = (
+				66C00C7426315A8000D6D0FE /* SettingCell */,
+				66C00C7626315AD100D6D0FE /* HeaderCell */,
+				66C00C7726315ADE00D6D0FE /* BottomCell */,
+			);
+			path = CellSetting;
+			sourceTree = "<group>";
+		};
+		66C00C7426315A8000D6D0FE /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
 				66C00C632631572C00D6D0FE /* settingCell.swift */,
 				66C00C642631572C00D6D0FE /* settingCell.xib */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
+		66C00C7626315AD100D6D0FE /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
 				66C00C682631577600D6D0FE /* headerDetailCell.swift */,
 				66C00C692631577600D6D0FE /* headerDetailCell.xib */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		66C00C7726315ADE00D6D0FE /* BottomCell */ = {
+			isa = PBXGroup;
+			children = (
 				66C00C6D2631578C00D6D0FE /* bottomDetailCell.swift */,
 				66C00C6E2631578C00D6D0FE /* bottomDetailCell.xib */,
 			);
-			path = CellSetting;
+			path = BottomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
