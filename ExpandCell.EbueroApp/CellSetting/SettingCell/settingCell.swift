@@ -8,6 +8,7 @@
 import UIKit
 
 class settingCell: UITableViewCell {
+    @IBOutlet weak var viewSetting: UIView!
     @IBOutlet weak var iconSetting: UIImageView!
     @IBOutlet weak var txSetting: UILabel!
     
@@ -19,6 +20,7 @@ class settingCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        viewSetting.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
