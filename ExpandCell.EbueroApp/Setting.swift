@@ -15,16 +15,16 @@ public enum TypeSetting {
 
 public struct SettingData {
     public let icon: String?
-    public let setting: String?
+    public let textSetting: String?
     public let imageHeader: String?
     public let detailHeader: String?
     public let subSetting: String?
     public let type: TypeSetting
     
-    init(icon: String?=nil, setting: String?=nil, imageHeader: String?=nil,
+    init(icon: String?=nil, textSetting: String?=nil, imageHeader: String?=nil,
          detailHeader: String?=nil, subSetting: String?=nil, type: TypeSetting) {
         self.icon = icon
-        self.setting = setting
+        self.textSetting = textSetting
         self.imageHeader = imageHeader
         self.detailHeader = detailHeader
         self.subSetting = subSetting
