@@ -8,6 +8,7 @@
 import UIKit
 
 class bottomDetailCell: UITableViewCell {
+    @IBOutlet weak var viewBottomCell: UIView!
     @IBOutlet weak var txSubSetting: UILabel!
     
     static let identifier = "bottomDetailCell"
@@ -18,7 +19,7 @@ class bottomDetailCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewBottomCell.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
