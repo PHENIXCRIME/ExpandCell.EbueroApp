@@ -11,6 +11,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableViewSetting: UITableView!
     
+    var dataSetting: [SettingData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareViews()
@@ -40,7 +42,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func setTypeSetting() {
-        
+        dataSetting = [SettingData(icon: "", setting: "Secretary's profile", type: .settingCell),
+                       SettingData(icon: "", setting: "About your company", type: .settingCell),
+                       SettingData(icon: "", setting: "Forwarding calls to You", type: .settingCell),
+                       SettingData(icon: "", setting: "Forwarding calls to Us", type: .settingCell),
+                       SettingData(icon: "", setting: "How to notify you", type: .settingCell),
+                       SettingData(icon: "", setting: "Calendar settings", type: .settingCell),
+                       SettingData(icon: "", setting: "Addressbook settings", type: .settingCell),
+                       SettingData(icon: "", setting: "User settings", type: .settingCell),
+                       SettingData(icon: "", setting: "Privacy settings", type: .settingCell),
+                       SettingData(icon: "", setting: "App settings", type: .settingCell)]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
