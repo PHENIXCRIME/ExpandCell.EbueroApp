@@ -42,16 +42,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func setTypeSetting() {
-        dataSetting = [SettingData(icon: "", textSetting: "Secretary's profile", type: .settingCell),
-                       SettingData(icon: "", textSetting: "About your company", type: .settingCell),
-                       SettingData(icon: "", textSetting: "Forwarding calls to You", type: .settingCell),
-                       SettingData(icon: "", textSetting: "Forwarding calls to Us", type: .settingCell),
-                       SettingData(icon: "", textSetting: "How to notify you", type: .settingCell),
-                       SettingData(icon: "", textSetting: "Calendar settings", type: .settingCell),
-                       SettingData(icon: "", textSetting: "Addressbook settings", type: .settingCell),
-                       SettingData(icon: "", textSetting: "User settings", type: .settingCell),
-                       SettingData(icon: "", textSetting: "Privacy settings", type: .settingCell),
-                       SettingData(icon: "", textSetting: "App settings", type: .settingCell)]
+        dataSetting = [SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", type: .settingCell),
+                       SettingData(imageHeader: "imgGreeting", detailHeader:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", type: .headerDetailCell),
+                       SettingData(subSetting: "Greeting", type: .bottomDetailCell),
+                       SettingData(subSetting: "Instruction", type: .bottomDetailCell),
+                       SettingData(subSetting: "Message to Secretary", type: .bottomDetailCell),
+                       SettingData(icon: "ic_work", textSetting: "About your company", type: .settingCell),
+                       SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to You", type: .settingCell),
+                       SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to Us", type: .settingCell),
+                       SettingData(icon: "ic_noti", textSetting: "How to notify you", type: .settingCell),
+                       SettingData(icon: "ic_calendar", textSetting: "Calendar settings", type: .settingCell),
+                       SettingData(icon: "ic_address", textSetting: "Addressbook settings", type: .settingCell),
+                       SettingData(icon: "ic_user", textSetting: "User settings", type: .settingCell),
+                       SettingData(icon: "ic_fingerprint", textSetting: "Privacy settings", type: .settingCell),
+                       SettingData(icon: "ic_phone", textSetting: "App settings", type: .settingCell)]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,6 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if let icon = setting.icon {
                 cell.iconSetting.image = UIImage(named: icon)?.withRenderingMode(.alwaysTemplate)
             }
+            cell.iconSetting.tintColor = .black
             return cell
         } else if setting.type == .headerDetailCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: headerDetailCell.identifier, for: indexPath) as! headerDetailCell
@@ -82,17 +87,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
         
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let setting = dataSetting[indexPath.row]
         switch setting.type {
         case .settingCell:
-            return 40
+            return 70
         case .headerDetailCell:
             return 160
         case .bottomDetailCell:
-            return 40
+            return 60
         }
     }
     
