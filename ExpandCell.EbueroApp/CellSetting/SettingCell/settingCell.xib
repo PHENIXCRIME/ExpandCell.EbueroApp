@@ -53,8 +53,8 @@
             <viewLayoutGuide key="safeArea" id="cLC-Ei-IjA"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="imgSetting" destination="Y0m-eM-Irw" id="gPW-vk-Zed"/>
-                <outlet property="txSetting" destination="cpz-sk-hhM" id="6jU-cJ-JFy"/>
+                <outlet property="iconSetting" destination="Y0m-eM-Irw" id="HuR-hj-4Xh"/>
+                <outlet property="txSetting" destination="510-ka-BVi" id="y8V-2g-1AO"/>
             </connections>
             <point key="canvasLocation" x="283" y="40"/>
         </tableViewCell>

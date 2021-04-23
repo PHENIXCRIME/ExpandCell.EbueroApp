@@ -8,8 +8,8 @@
 import UIKit
 
 class settingCell: UITableViewCell {
-    @IBOutlet weak var imgSetting: UIImageView!
-    @IBOutlet weak var txSetting: NSLayoutConstraint!
+    @IBOutlet weak var iconSetting: UIImageView!
+    @IBOutlet weak var txSetting: UILabel!
     
     static let identifier = "settingCell"
     
