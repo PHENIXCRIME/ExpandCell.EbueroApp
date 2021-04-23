@@ -9,8 +9,8 @@ import Foundation
 
 public enum TypeSetting {
     case settingCell
-    case headerCell
-    case bottomCell
+    case headerDetailCell
+    case bottomDetailCell
 }
 
 public struct SettingData {
