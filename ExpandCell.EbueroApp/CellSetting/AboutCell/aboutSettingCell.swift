@@ -8,7 +8,14 @@
 import UIKit
 
 class aboutSettingCell: UITableViewCell {
-
+    @IBOutlet weak var txAboutSetting: UILabel!
+    
+    static let identifier = "aboutSettingCell"
+    
+    static func nib() ->UINib {
+        return UINib(nibName: "aboutSettingCell", bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
