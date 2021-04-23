@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66387FD52632C592000B5BF1 /* aboutSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66387FD32632C592000B5BF1 /* aboutSettingCell.swift */; };
+		66387FD62632C592000B5BF1 /* aboutSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66387FD42632C592000B5BF1 /* aboutSettingCell.xib */; };
 		669DD97A2630255E00A67963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DD9792630255E00A67963 /* AppDelegate.swift */; };
 		669DD97C2630255E00A67963 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DD97B2630255E00A67963 /* SceneDelegate.swift */; };
 		669DD97E2630255E00A67963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669DD97D2630255E00A67963 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66387FD32632C592000B5BF1 /* aboutSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutSettingCell.swift; sourceTree = "<group>"; };
+		66387FD42632C592000B5BF1 /* aboutSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = aboutSettingCell.xib; sourceTree = "<group>"; };
 		669DD9762630255E00A67963 /* ExpandCell.EbueroApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandCell.EbueroApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669DD9792630255E00A67963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669DD97B2630255E00A67963 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66387FD82632C598000B5BF1 /* AboutCell */ = {
+			isa = PBXGroup;
+			children = (
+				66387FD32632C592000B5BF1 /* aboutSettingCell.swift */,
+				66387FD42632C592000B5BF1 /* aboutSettingCell.xib */,
+			);
+			path = AboutCell;
+			sourceTree = "<group>";
+		};
 		669DD96D2630255E00A67963 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 				66C00C7426315A8000D6D0FE /* SettingCell */,
 				66C00C7626315AD100D6D0FE /* HeaderCell */,
 				66C00C7726315ADE00D6D0FE /* BottomCell */,
+				66387FD82632C598000B5BF1 /* AboutCell */,
 			);
 			path = CellSetting;
 			sourceTree = "<group>";
@@ -180,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66387FD62632C592000B5BF1 /* aboutSettingCell.xib in Resources */,
 				66C00C6B2631577600D6D0FE /* headerDetailCell.xib in Resources */,
 				669DD9892630256000A67963 /* LaunchScreen.storyboard in Resources */,
 				669DD9862630256000A67963 /* Assets.xcassets in Resources */,
@@ -204,6 +219,7 @@
 				669DD9842630255E00A67963 /* ExpandCell_EbueroApp.xcdatamodeld in Sources */,
 				669DD97A2630255E00A67963 /* AppDelegate.swift in Sources */,
 				669DD97C2630255E00A67963 /* SceneDelegate.swift in Sources */,
+				66387FD52632C592000B5BF1 /* aboutSettingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
