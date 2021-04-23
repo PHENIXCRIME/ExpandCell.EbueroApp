@@ -31,10 +31,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func registerCell() {
+        let aboutSettingCell = UINib(nibName: "aboutSettingCell", bundle: Bundle.main)
         let settingCell = UINib(nibName: "settingCell", bundle: Bundle.main)
         let headerDetailCell = UINib(nibName: "headerDetailCell", bundle: Bundle.main)
         let bottomDetailCell = UINib(nibName: "bottomDetailCell", bundle: Bundle.main)
         
+        tableViewSetting.register(aboutSettingCell, forCellReuseIdentifier: "aboutSettingCell")
         tableViewSetting.register(settingCell, forCellReuseIdentifier: "settingCell")
         tableViewSetting.register(headerDetailCell, forCellReuseIdentifier: "headerDetailCell")
         tableViewSetting.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
@@ -42,7 +44,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func setTypeSetting() {
-        dataSetting = [SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", type: .settingCell),
+        dataSetting = [SettingData(about: "What you can manage here", type: .aboutSettingCell),
+                       SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", type: .settingCell),
                        SettingData(imageHeader: "imgGreeting", detailHeader:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", type: .headerDetailCell),
                        SettingData(subSetting: "Greeting", type: .bottomDetailCell),
                        SettingData(subSetting: "Instruction", type: .bottomDetailCell),
@@ -65,7 +68,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let setting = dataSetting[indexPath.row]
         
-        if setting.type == .settingCell {
+        if setting.type == .aboutSettingCell {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: aboutSettingCell.identifier, for: indexPath) as! aboutSettingCell
+            cell.txAboutSetting.text = setting.about
+            return cell
+        }  else if setting.type == .settingCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: settingCell.identifier, for: indexPath) as! settingCell
             cell.txSetting.text = setting.textSetting
             if let icon = setting.icon {
@@ -90,6 +97,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let setting = dataSetting[indexPath.row]
         switch setting.type {
+        case .aboutSettingCell:
+            return 35
         case .settingCell:
             return 70
         case .headerDetailCell:
