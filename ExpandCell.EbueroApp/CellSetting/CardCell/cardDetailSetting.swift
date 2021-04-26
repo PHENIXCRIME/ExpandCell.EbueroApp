@@ -8,6 +8,12 @@
 import UIKit
 
 class cardDetailSetting: UITableViewCell {
+    
+    static let identifier = "cardDetailSetting"
+    
+    static func nib() ->UINib {
+        return UINib(nibName: "cardDetailSetting", bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
