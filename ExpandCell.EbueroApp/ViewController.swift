@@ -35,11 +35,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let settingCell = UINib(nibName: "settingCell", bundle: Bundle.main)
         let headerDetailCell = UINib(nibName: "headerDetailCell", bundle: Bundle.main)
         let bottomDetailCell = UINib(nibName: "bottomDetailCell", bundle: Bundle.main)
+        let cardDetailSettingCell = UINib(nibName:"cardDetailSetting", bundle: Bundle.main)
         
         tableViewSetting.register(aboutSettingCell, forCellReuseIdentifier: "aboutSettingCell")
         tableViewSetting.register(settingCell, forCellReuseIdentifier: "settingCell")
         tableViewSetting.register(headerDetailCell, forCellReuseIdentifier: "headerDetailCell")
         tableViewSetting.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
+        tableViewSetting.register(cardDetailSettingCell, forCellReuseIdentifier: "cardDetailSetting")
         
     }
     
@@ -105,6 +107,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return 160
         case .bottomDetailCell:
             return 60
+        case .cardDetailSettingCell:
+            return UITableView.automaticDimension
         }
     }
     
