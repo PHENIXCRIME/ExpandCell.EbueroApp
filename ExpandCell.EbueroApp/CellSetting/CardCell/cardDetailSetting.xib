@@ -17,39 +17,43 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-Ae-tdc">
-                        <rect key="frame" x="0.0" y="0.0" width="380" height="80"/>
+                        <rect key="frame" x="10" y="0.0" width="360" height="80"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="tbm-bh-xca"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-AF-qiz">
-                        <rect key="frame" x="10" y="90" width="325" height="60"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-2T-J5h">
-                        <rect key="frame" x="345" y="130" width="20" height="20"/>
+                        <rect key="frame" x="330" y="90" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="OfP-2T-J5h" secondAttribute="height" multiplier="1:1" id="OFe-kX-4vq"/>
                             <constraint firstAttribute="width" constant="20" id="gxE-de-HSK"/>
                         </constraints>
                         <state key="normal" image="ic_more"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-AF-qiz">
+                        <rect key="frame" x="30" y="95" width="280" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="OfP-2T-J5h" secondAttribute="trailing" constant="15" id="3En-oG-8jP"/>
-                    <constraint firstItem="OfP-2T-J5h" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="50" id="59F-gf-jgq"/>
-                    <constraint firstAttribute="bottom" secondItem="Gy1-AF-qiz" secondAttribute="bottom" constant="10" id="86b-cb-2yK"/>
-                    <constraint firstItem="Gy1-AF-qiz" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="10" id="Q5Y-3u-BfI"/>
-                    <constraint firstAttribute="trailing" secondItem="fxT-Ae-tdc" secondAttribute="trailing" id="R7G-ei-pyc"/>
+                    <constraint firstAttribute="trailing" secondItem="OfP-2T-J5h" secondAttribute="trailing" constant="30" id="3En-oG-8jP"/>
+                    <constraint firstItem="OfP-2T-J5h" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="10" id="59F-gf-jgq"/>
+                    <constraint firstAttribute="bottom" secondItem="Gy1-AF-qiz" secondAttribute="bottom" constant="20" id="86b-cb-2yK"/>
+                    <constraint firstItem="Gy1-AF-qiz" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="15" id="Q5Y-3u-BfI"/>
+                    <constraint firstAttribute="trailing" secondItem="fxT-Ae-tdc" secondAttribute="trailing" constant="10" id="R7G-ei-pyc"/>
                     <constraint firstItem="fxT-Ae-tdc" firstAttribute="top" secondItem="Ztm-03-PM9" secondAttribute="top" id="Rrg-Uk-gUv"/>
-                    <constraint firstItem="fxT-Ae-tdc" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" id="dwR-sA-AtU"/>
-                    <constraint firstItem="OfP-2T-J5h" firstAttribute="leading" secondItem="Gy1-AF-qiz" secondAttribute="trailing" constant="10" id="noS-BK-aez"/>
-                    <constraint firstItem="Gy1-AF-qiz" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" constant="10" id="rty-x1-M5k"/>
+                    <constraint firstItem="fxT-Ae-tdc" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" constant="10" id="dwR-sA-AtU"/>
+                    <constraint firstItem="OfP-2T-J5h" firstAttribute="leading" secondItem="Gy1-AF-qiz" secondAttribute="trailing" constant="20" id="noS-BK-aez"/>
+                    <constraint firstItem="Gy1-AF-qiz" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" constant="30" id="rty-x1-M5k"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="14m-yy-CCk"/>
+            <connections>
+                <outlet property="imgHeader" destination="fxT-Ae-tdc" id="bui-RN-fTr"/>
+                <outlet property="txDetailHeader" destination="Gy1-AF-qiz" id="y9D-kz-C9h"/>
+            </connections>
             <point key="canvasLocation" x="312" y="123"/>
         </tableViewCell>
     </objects>

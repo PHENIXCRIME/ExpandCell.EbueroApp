@@ -8,7 +8,9 @@
 import UIKit
 
 class cardDetailSetting: UITableViewCell {
-    
+    @IBOutlet weak var imgHeader: UIImageView!
+    @IBOutlet weak var txDetailHeader: UILabel!
+        
     static let identifier = "cardDetailSetting"
     
     static func nib() ->UINib {
@@ -17,7 +19,6 @@ class cardDetailSetting: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
