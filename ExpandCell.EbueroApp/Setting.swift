@@ -23,7 +23,7 @@ public struct SettingData {
     public let previewDetail: String?
     public let detailHeader: String?
     public let subSetting: String?
-    public let defaultDetail: Bool?
+    public var defaultDetail: Bool?
     public let type: TypeSetting
     
     init(about: String?=nil, icon: String?=nil, textSetting: String?=nil, imageHeader: String?=nil,
