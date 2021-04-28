@@ -10,7 +10,11 @@ import UIKit
 class cardDetailSetting: UITableViewCell {
     @IBOutlet weak var imgHeader: UIImageView!
     @IBOutlet weak var txDetailHeader: UILabel!
-        
+    @IBOutlet weak var btnMore: UIButton!
+    
+    var isClick = true
+
+    
     static let identifier = "cardDetailSetting"
     
     static func nib() ->UINib {
@@ -27,4 +31,11 @@ class cardDetailSetting: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func btnMore(_ sender: Any) {
+        if isClick == false {
+            txDetailHeader.numberOfLines = 3
+        } else {
+            txDetailHeader.numberOfLines = 0
+        }
+    }
 }

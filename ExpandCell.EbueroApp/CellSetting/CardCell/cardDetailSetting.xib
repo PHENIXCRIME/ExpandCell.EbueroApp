@@ -23,14 +23,17 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-2T-J5h">
-                        <rect key="frame" x="330" y="90" width="20" height="20"/>
+                        <rect key="frame" x="330" y="130" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="OfP-2T-J5h" secondAttribute="height" multiplier="1:1" id="OFe-kX-4vq"/>
                             <constraint firstAttribute="width" constant="20" id="gxE-de-HSK"/>
                         </constraints>
                         <state key="normal" image="ic_more"/>
+                        <connections>
+                            <action selector="btnMore:" destination="wkh-EQ-vvb" eventType="touchUpInside" id="DTC-3K-6wo"/>
+                        </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-AF-qiz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-AF-qiz">
                         <rect key="frame" x="30" y="95" width="280" height="45"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,7 +42,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="OfP-2T-J5h" secondAttribute="trailing" constant="30" id="3En-oG-8jP"/>
-                    <constraint firstItem="OfP-2T-J5h" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="10" id="59F-gf-jgq"/>
+                    <constraint firstItem="OfP-2T-J5h" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="50" id="59F-gf-jgq"/>
                     <constraint firstAttribute="bottom" secondItem="Gy1-AF-qiz" secondAttribute="bottom" constant="20" id="86b-cb-2yK"/>
                     <constraint firstItem="Gy1-AF-qiz" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="15" id="Q5Y-3u-BfI"/>
                     <constraint firstAttribute="trailing" secondItem="fxT-Ae-tdc" secondAttribute="trailing" constant="10" id="R7G-ei-pyc"/>
@@ -51,6 +54,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="14m-yy-CCk"/>
             <connections>
+                <outlet property="btnMore" destination="OfP-2T-J5h" id="AkV-20-11x"/>
                 <outlet property="imgHeader" destination="fxT-Ae-tdc" id="bui-RN-fTr"/>
                 <outlet property="txDetailHeader" destination="Gy1-AF-qiz" id="y9D-kz-C9h"/>
             </connections>
