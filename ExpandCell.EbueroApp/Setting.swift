@@ -20,18 +20,22 @@ public struct SettingData {
     public let icon: String?
     public let textSetting: String?
     public let imageHeader: String?
+    public let previewDetail: String?
     public let detailHeader: String?
     public let subSetting: String?
+    public let defaultDetail: Bool?
     public let type: TypeSetting
     
     init(about: String?=nil, icon: String?=nil, textSetting: String?=nil, imageHeader: String?=nil,
-         detailHeader: String?=nil, subSetting: String?=nil, type: TypeSetting) {
+         previewDetail: String?=nil,detailHeader: String?=nil, subSetting: String?=nil, defaultDetail: Bool?=nil, type: TypeSetting) {
         self.about = about
         self.icon = icon
         self.textSetting = textSetting
         self.imageHeader = imageHeader
+        self.previewDetail = previewDetail 
         self.detailHeader = detailHeader
         self.subSetting = subSetting
+        self.defaultDetail = defaultDetail
         self.type = type
     }
 }
