@@ -23,6 +23,7 @@ class cardDetailSetting: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,9 +34,9 @@ class cardDetailSetting: UITableViewCell {
     
     @IBAction func btnMore(_ sender: Any) {
         if isClick == false {
-            txDetailHeader.numberOfLines = 3
-        } else {
             txDetailHeader.numberOfLines = 0
+        } else {
+            txDetailHeader.numberOfLines = 3
         }
     }
 }
