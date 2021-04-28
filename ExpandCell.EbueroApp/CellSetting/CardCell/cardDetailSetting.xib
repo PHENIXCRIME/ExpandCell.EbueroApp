@@ -34,13 +34,13 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-AF-qiz">
-                        <rect key="frame" x="35" y="95" width="270" height="45"/>
+                        <rect key="frame" x="35" y="95" width="270" height="50"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <font key="NSFont" metaFont="system" size="16"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -50,7 +50,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="OfP-2T-J5h" secondAttribute="trailing" constant="35" id="3En-oG-8jP"/>
                     <constraint firstItem="OfP-2T-J5h" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="50" id="59F-gf-jgq"/>
-                    <constraint firstAttribute="bottom" secondItem="Gy1-AF-qiz" secondAttribute="bottom" constant="20" id="86b-cb-2yK"/>
+                    <constraint firstAttribute="bottom" secondItem="Gy1-AF-qiz" secondAttribute="bottom" constant="15" id="86b-cb-2yK"/>
                     <constraint firstItem="Gy1-AF-qiz" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="15" id="Q5Y-3u-BfI"/>
                     <constraint firstAttribute="trailing" secondItem="fxT-Ae-tdc" secondAttribute="trailing" constant="15" id="R7G-ei-pyc"/>
                     <constraint firstItem="fxT-Ae-tdc" firstAttribute="top" secondItem="Ztm-03-PM9" secondAttribute="top" id="Rrg-Uk-gUv"/>

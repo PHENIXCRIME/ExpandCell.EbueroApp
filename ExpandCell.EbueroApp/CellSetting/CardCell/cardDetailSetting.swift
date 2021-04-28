@@ -6,14 +6,19 @@
 //
 
 import UIKit
-
+protocol cardDetailSettingDelegate {
+    func btnMoreDidTapped(index:Int)
+}
 class cardDetailSetting: UITableViewCell {
     @IBOutlet weak var imgHeader: UIImageView!
     @IBOutlet weak var txDetailHeader: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     
     var isClick = true
-
+    
+    var index: Int = 0
+    
+    var delegate: cardDetailSettingDelegate?
     
     static let identifier = "cardDetailSetting"
     
@@ -33,10 +38,6 @@ class cardDetailSetting: UITableViewCell {
     }
     
     @IBAction func btnMore(_ sender: Any) {
-        if isClick == false {
-            txDetailHeader.numberOfLines = 0
-        } else {
-            txDetailHeader.numberOfLines = 3
-        }
+        delegate?.btnMoreDidTapped(index: index)
     }
 }
