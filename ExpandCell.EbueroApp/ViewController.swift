@@ -49,11 +49,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setTypeSetting() {
         dataSetting = [SettingData(about: "What you can manage here", type: .aboutSettingCell),
                        SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", type: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" , detailHeader: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",defaultDetail: true, type: .cardDetailSettingCell),
+                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", detailHeader: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, type: .cardDetailSettingCell),
                        SettingData(icon: "ic_work", textSetting: "About your company", type: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" , detailHeader: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: true,type: .cardDetailSettingCell),
+                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", detailHeader: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, type: .cardDetailSettingCell),
                        SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to You", type: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" , detailHeader: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: true,type: .cardDetailSettingCell)]
+                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", detailHeader: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, type: .cardDetailSettingCell)]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,12 +70,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }  else if setting.type == .cardDetailSettingCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: cardDetailSetting.identifier, for: indexPath) as! cardDetailSetting
             cell.delegate = self
-            cell.txDetailHeader.text = setting.detailHeader
+            if setting.defaultDetail == false {
+                cell.txDetailHeader.text = setting.previewDetail
+            } else {
+                cell.txDetailHeader.text = setting.detailHeader
+            }
+            
             cell.index = indexPath.row
+            
             if let image = setting.imageHeader {
                 cell.imgHeader.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
             }
             return cell
+            
+            
         }  else {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: settingCell.identifier, for: indexPath) as! settingCell
             cell.txSetting.text = setting.textSetting
@@ -88,7 +96,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func btnMoreDidTapped(index:Int) {
-        print(index)
+//        if dataSetting[index].defaultDetail == true {
+//            dataSetting[index].defaultDetail = false
+//        } else {
+//            dataSetting[index].defaultDetail = true
+//        } * -- this way  simple check variable in array -*
+        
+//        if dataSetting[index].defaultDetail ?? false  {
+//            dataSetting[index].defaultDetail = false
+//        } else {
+//            dataSetting[index].defaultDetail = true
+//        } *-- check with variable don't is type --* 
+        
+        dataSetting[index].defaultDetail = !(dataSetting[index].defaultDetail ?? false)
+        tableViewSetting.reloadData()
     }
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
