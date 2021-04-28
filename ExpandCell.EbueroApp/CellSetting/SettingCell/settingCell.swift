@@ -11,6 +11,7 @@ class settingCell: UITableViewCell {
     @IBOutlet weak var viewSetting: UIView!
     @IBOutlet weak var iconSetting: UIImageView!
     @IBOutlet weak var txSetting: UILabel!
+    @IBOutlet weak var btnExpanable: UIButton!
     
     static let identifier = "settingCell"
     
@@ -27,4 +28,12 @@ class settingCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+//    func isExpandable(_isExpan: Bool) {
+//        var iconButton: String = "ic_arrow_down"
+//        if !_isExpan {
+//            iconButton = "ic_arrow_up"
+//        }
+//        btnExpanable.setImage(UIImage(named: iconButton)?.withRenderingMode(.alwaysOriginal),for: .normal)
+//    }
+//
 }
