@@ -27,13 +27,5 @@ class SettingCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-//    func isExpandable(_isExpan: Bool) {
-//        var iconButton: String = "ic_arrow_down"
-//        if !_isExpan {
-//            iconButton = "ic_arrow_up"
-//        }
-//        btnExpanable.setImage(UIImage(named: iconButton)?.withRenderingMode(.alwaysOriginal),for: .normal)
-//    }
-//
+
 }
