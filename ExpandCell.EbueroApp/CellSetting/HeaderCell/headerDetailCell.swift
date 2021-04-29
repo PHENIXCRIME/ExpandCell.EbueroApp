@@ -7,7 +7,7 @@
 
 import UIKit
 
-class headerDetailCell: UITableViewCell {
+class HeaderDetailCell: UITableViewCell {
     @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var txDetailHeader: UILabel!
     

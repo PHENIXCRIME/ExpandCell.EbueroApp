@@ -7,7 +7,7 @@
 
 import UIKit
 
-class aboutSettingCell: UITableViewCell {
+class AboutSettingCell: UITableViewCell {
     @IBOutlet weak var txAboutSetting: UILabel!
     
     static let identifier = "aboutSettingCell"

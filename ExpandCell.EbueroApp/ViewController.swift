@@ -31,11 +31,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func registerCell() {
-        let aboutSettingCell = UINib(nibName: "aboutSettingCell", bundle: Bundle.main)
-        let settingCell = UINib(nibName: "settingCell", bundle: Bundle.main)
-        let headerDetailCell = UINib(nibName: "headerDetailCell", bundle: Bundle.main)
-        let bottomDetailCell = UINib(nibName: "bottomDetailCell", bundle: Bundle.main)
-        let cardDetailSettingCell = UINib(nibName:"cardDetailSetting", bundle: Bundle.main)
+        let aboutSettingCell = UINib(nibName: "AboutSettingCell", bundle: Bundle.main)
+        let settingCell = UINib(nibName: "SettingCell", bundle: Bundle.main)
+        let headerDetailCell = UINib(nibName: "HeaderDetailCell", bundle: Bundle.main)
+        let bottomDetailCell = UINib(nibName: "BottomDetailCell", bundle: Bundle.main)
+        let cardDetailSettingCell = UINib(nibName:"CardDetailSetting", bundle: Bundle.main)
         
         tableViewSetting.register(aboutSettingCell, forCellReuseIdentifier: "aboutSettingCell")
         tableViewSetting.register(settingCell, forCellReuseIdentifier: "settingCell")
@@ -77,11 +77,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let setting = dataSetting[indexPath.row]
         
         if setting.typeSetting == .aboutSettingCell {
-            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: aboutSettingCell.identifier, for: indexPath) as! aboutSettingCell
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: AboutSettingCell.identifier, for: indexPath) as! AboutSettingCell
             cell.txAboutSetting.text = setting.about
             return cell
         }  else if setting.typeSetting == .cardDetailSettingCell {
-            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: cardDetailSetting.identifier, for: indexPath) as! cardDetailSetting
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardDetailSetting.identifier, for: indexPath) as! CardDetailSetting
             cell.delegate = self
             if setting.defaultDetail == false {
                 cell.txDetailHeader.text = setting.previewDetail
@@ -93,13 +93,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imgHeader.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
             }
             return cell
-        }  else {
-            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: settingCell.identifier, for: indexPath) as! settingCell
+        }  else if setting.typeSetting == .settingCell {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingCell.identifier, for: indexPath) as! SettingCell
             cell.txSetting.text = setting.textSetting
             if let icon = setting.icon {
                 cell.iconSetting.image = UIImage(named: icon)?.withRenderingMode(.alwaysTemplate)
             }
             cell.iconSetting.tintColor = .black
+            return cell
+        } else {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: BottomDetailCell.identifier, for: indexPath) as! BottomDetailCell
+            cell.txSubSetting.text = setting.subSetting
             return cell
         }
     }

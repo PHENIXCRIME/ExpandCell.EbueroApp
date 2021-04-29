@@ -9,7 +9,7 @@ import UIKit
 protocol cardDetailSettingDelegate {
     func btnMoreDidTapped(index:Int)
 }
-class cardDetailSetting: UITableViewCell {
+class CardDetailSetting: UITableViewCell {
     @IBOutlet weak var imgHeader: UIImageView!
     @IBOutlet weak var txDetailHeader: UILabel!
     @IBOutlet weak var btnMore: UIButton!

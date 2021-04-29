@@ -7,7 +7,7 @@
 
 import UIKit
 
-class bottomDetailCell: UITableViewCell {
+class BottomDetailCell: UITableViewCell {
     @IBOutlet weak var viewBottomCell: UIView!
     @IBOutlet weak var txSubSetting: UILabel!
     
