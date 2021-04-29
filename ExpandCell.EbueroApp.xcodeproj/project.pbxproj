@@ -25,6 +25,8 @@
 		66C00C702631578C00D6D0FE /* BottomDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C00C6E2631578C00D6D0FE /* BottomDetailCell.xib */; };
 		66C87F772636ADA200CC9909 /* CardDetailSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C87F752636ADA200CC9909 /* CardDetailSetting.swift */; };
 		66C87F782636ADA200CC9909 /* CardDetailSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C87F762636ADA200CC9909 /* CardDetailSetting.xib */; };
+		66D6486A263AC3AE002693A5 /* CardDetailSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */; };
+		66D6486B263AC3AE002693A5 /* CardDetailSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		66C00C6E2631578C00D6D0FE /* BottomDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomDetailCell.xib; sourceTree = "<group>"; };
 		66C87F752636ADA200CC9909 /* CardDetailSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailSetting.swift; sourceTree = "<group>"; };
 		66C87F762636ADA200CC9909 /* CardDetailSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailSetting.xib; sourceTree = "<group>"; };
+		66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailSettingCell.swift; sourceTree = "<group>"; };
+		66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailSettingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				66C00C7726315ADE00D6D0FE /* BottomCell */,
 				66387FD82632C598000B5BF1 /* AboutCell */,
 				66C87F7A2636ADA700CC9909 /* CardCell */,
+				66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */,
+				66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */,
 			);
 			path = CellSetting;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66387FD62632C592000B5BF1 /* AboutSettingCell.xib in Resources */,
+				66D6486B263AC3AE002693A5 /* CardDetailSettingCell.xib in Resources */,
 				66C87F782636ADA200CC9909 /* CardDetailSetting.xib in Resources */,
 				66C00C6B2631577600D6D0FE /* HeaderDetailCell.xib in Resources */,
 				669DD9892630256000A67963 /* LaunchScreen.storyboard in Resources */,
@@ -226,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D6486A263AC3AE002693A5 /* CardDetailSettingCell.swift in Sources */,
 				66C00C652631572C00D6D0FE /* SettingCell.swift in Sources */,
 				66C00C6F2631578C00D6D0FE /* BottomDetailCell.swift in Sources */,
 				66C00C612631511900D6D0FE /* Setting.swift in Sources */,
