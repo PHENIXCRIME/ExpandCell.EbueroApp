@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,7 +23,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OfP-2T-J5h">
-                        <rect key="frame" x="325" y="130" width="20" height="20"/>
+                        <rect key="frame" x="345" y="130" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="OfP-2T-J5h" secondAttribute="height" multiplier="1:1" id="OFe-kX-4vq"/>
                             <constraint firstAttribute="width" constant="20" id="gxE-de-HSK"/>
@@ -34,13 +34,13 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-AF-qiz">
-                        <rect key="frame" x="35" y="95" width="270" height="50"/>
+                        <rect key="frame" x="30" y="95" width="295" height="50"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <font key="NSFont" metaFont="system" size="16"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -48,7 +48,7 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="OfP-2T-J5h" secondAttribute="trailing" constant="35" id="3En-oG-8jP"/>
+                    <constraint firstAttribute="trailing" secondItem="OfP-2T-J5h" secondAttribute="trailing" constant="15" id="3En-oG-8jP"/>
                     <constraint firstItem="OfP-2T-J5h" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="50" id="59F-gf-jgq"/>
                     <constraint firstAttribute="bottom" secondItem="Gy1-AF-qiz" secondAttribute="bottom" constant="15" id="86b-cb-2yK"/>
                     <constraint firstItem="Gy1-AF-qiz" firstAttribute="top" secondItem="fxT-Ae-tdc" secondAttribute="bottom" constant="15" id="Q5Y-3u-BfI"/>
@@ -56,7 +56,7 @@
                     <constraint firstItem="fxT-Ae-tdc" firstAttribute="top" secondItem="Ztm-03-PM9" secondAttribute="top" id="Rrg-Uk-gUv"/>
                     <constraint firstItem="fxT-Ae-tdc" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" constant="15" id="dwR-sA-AtU"/>
                     <constraint firstItem="OfP-2T-J5h" firstAttribute="leading" secondItem="Gy1-AF-qiz" secondAttribute="trailing" constant="20" id="noS-BK-aez"/>
-                    <constraint firstItem="Gy1-AF-qiz" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" constant="35" id="rty-x1-M5k"/>
+                    <constraint firstItem="Gy1-AF-qiz" firstAttribute="leading" secondItem="Ztm-03-PM9" secondAttribute="leading" constant="30" id="rty-x1-M5k"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="14m-yy-CCk"/>
