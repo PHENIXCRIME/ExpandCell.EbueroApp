@@ -42,7 +42,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewSetting.register(headerDetailCell, forCellReuseIdentifier: "headerDetailCell")
         tableViewSetting.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
         tableViewSetting.register(cardDetailSettingCell, forCellReuseIdentifier: "cardDetailSetting")
-        
     }
     
     func setTypeSetting() {
@@ -50,8 +49,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                        SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", typeSetting: .settingCell),
                        SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardDetailSettingCell),
                        SettingData(icon: "ic_work", textSetting: "About your company", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardDetailSettingCell),
-                       SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to You", typeSetting: .settingCell),
                        SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardDetailSettingCell),
                        SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to You", typeSetting: .settingCell),
                        SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardDetailSettingCell),
@@ -115,13 +112,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            dataSetting[index].defaultDetail = false
 //        } else {
 //            dataSetting[index].defaultDetail = true
-//        } * -- this way  simple check variable in array -*
+//        } *-- 1. this way  simple check variable in array --*
         
 //        if dataSetting[index].defaultDetail ?? false  {
 //            dataSetting[index].defaultDetail = false
 //        } else {
 //            dataSetting[index].defaultDetail = true
-//        } *-- check with variable don't is type --* 
+//        } *-- 2. check with variable don't is type --*
         
         dataSetting[index].defaultDetail = !(dataSetting[index].defaultDetail ?? false)
         tableViewSetting.reloadData() // way check with don't value this is value >> same on code is don't is false
@@ -142,6 +139,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return UITableView.automaticDimension
         }
     }
-    
 }
 
