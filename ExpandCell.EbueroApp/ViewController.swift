@@ -85,10 +85,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.delegate = self
             if setting.defaultDetail == false {
                 cell.txDetailHeader.text = setting.previewDetail
-                cell.txDetailHeader.numberOfLines = 3
             } else {
                 cell.txDetailHeader.text = setting.fullDetail
-                cell.txDetailHeader.numberOfLines = 0
             }
             cell.index = indexPath.row
             if let image = setting.imageHeader {
@@ -118,10 +116,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            dataSetting[index].defaultDetail = false
 //        } else {
 //            dataSetting[index].defaultDetail = true
-//        } *-- 2. check with variable don't is type --*
+//        } *-- 2. check with variable don't is type --*\
         
+        clearIndex()
         dataSetting[index].defaultDetail = !(dataSetting[index].defaultDetail ?? false)
         tableViewSetting.reloadData() // way check with don't value this is value >> same on code is don't is false
+    }
+    
+    func clearIndex() { // func set fix clear value of index when press and use in btnMore
+        for i in 0 ... (dataSetting.count - 1) {
+            dataSetting[i].defaultDetail = false
+        }
     }
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
