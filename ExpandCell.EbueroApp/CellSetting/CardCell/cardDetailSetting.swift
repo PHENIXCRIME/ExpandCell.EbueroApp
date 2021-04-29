@@ -14,8 +14,6 @@ class CardDetailSetting: UITableViewCell {
     @IBOutlet weak var txDetailHeader: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     
-    var isClick = true
-    
     var index: Int = 0
     
     var delegate: cardDetailSettingDelegate?

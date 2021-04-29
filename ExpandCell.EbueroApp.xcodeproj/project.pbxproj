@@ -115,8 +115,7 @@
 				66C00C7726315ADE00D6D0FE /* BottomCell */,
 				66387FD82632C598000B5BF1 /* AboutCell */,
 				66C87F7A2636ADA700CC9909 /* CardCell */,
-				66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */,
-				66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */,
+				66D6486C263AC45A002693A5 /* CardDetailSettingCell */,
 			);
 			path = CellSetting;
 			sourceTree = "<group>";
@@ -155,6 +154,15 @@
 				66C87F762636ADA200CC9909 /* CardDetailSetting.xib */,
 			);
 			path = CardCell;
+			sourceTree = "<group>";
+		};
+		66D6486C263AC45A002693A5 /* CardDetailSettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */,
+				66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */,
+			);
+			path = CardDetailSettingCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
