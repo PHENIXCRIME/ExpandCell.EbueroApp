@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, cardDetailSettingDelegate ,cardDetailSettingCellDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, cardDetailSettingDelegate, cardDetailSettingCellDelegate {
     
     @IBOutlet weak var tableViewSetting: UITableView!
     
@@ -36,39 +36,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let headerDetailCell = UINib(nibName: "HeaderDetailCell", bundle: Bundle.main)
         let bottomDetailCell = UINib(nibName: "BottomDetailCell", bundle: Bundle.main)
         let cardSettingCell = UINib(nibName: "CardSettingCell", bundle: Bundle.main)
-        let cardDetailSettingCellCell = UINib(nibName: "CardDetailSettingCell", bundle: Bundle.main)
+        let cardDetailSettingCell = UINib(nibName: "CardDetailSettingCell", bundle: Bundle.main)
         
         tableViewSetting.register(aboutSettingCell, forCellReuseIdentifier: "aboutSettingCell")
         tableViewSetting.register(settingCell, forCellReuseIdentifier: "settingCell")
         tableViewSetting.register(headerDetailCell, forCellReuseIdentifier: "headerDetailCell")
         tableViewSetting.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
         tableViewSetting.register(cardSettingCell, forCellReuseIdentifier: "cardSettingCell")
-        tableViewSetting.register(cardDetailSettingCellCell, forCellReuseIdentifier: "cardDetailSettingCellCell")
+        tableViewSetting.register(cardDetailSettingCell, forCellReuseIdentifier: "cardDetailSettingCell")
     }
     
     func setTypeSetting() {
         dataSetting = [SettingData(about: "What you can manage here", typeSetting: .aboutSettingCell),
-                       SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_work", textSetting: "About your company", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to You", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_phonForwarded", textSetting: "Forwarding calls to Us", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_noti", textSetting: "How to notify you", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_calendar", textSetting: "Calendar settings", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_address", textSetting: "Addressbook settings", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_user", textSetting: "User settings", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_fingerprint", textSetting: "Privacy settings", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
-                       SettingData(icon: "ic_phone", textSetting: "App settings", typeSetting: .settingCell),
-                       SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell)
-        ]
+                               SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", typeSetting: .settingCell),
+                               SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
+                               SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", typeSetting: .settingCell),
+                               SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardSettingCell),
+                               SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", typeSetting: .settingCell),
+                               SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardDetailSettingCell),
+                               SettingData(icon: "ic_headphone", textSetting: "Secretary's profile", typeSetting: .settingCell),
+                               SettingData(imageHeader: "imgGreeting", previewDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", fullDetail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", defaultDetail: false, typeSetting: .cardDetailSettingCell)
+                ]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,6 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: AboutSettingCell.identifier, for: indexPath) as! AboutSettingCell
             cell.txAboutSetting.text = setting.about
             return cell
+            
         }  else if setting.typeSetting == .cardSettingCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardSettingCell.identifier, for: indexPath) as! CardSettingCell
             cell.delegate = self
@@ -95,6 +84,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.imgHeader.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
             }
             return cell
+            
         }  else if setting.typeSetting == .settingCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingCell.identifier, for: indexPath) as! SettingCell
             cell.txSetting.text = setting.textSetting
@@ -103,6 +93,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             cell.iconSetting.tintColor = .black
             return cell
+            
+        } else if setting.typeSetting == .cardDetailSettingCell {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardDetailSettingCell.identifier, for: indexPath) as! CardDetailSettingCell
+            cell.delegate = self
+            if setting.defaultDetail == false {
+                cell.txDetail.text = setting.previewDetail
+            } else {
+                cell.txDetail.text = setting.fullDetail
+            }
+            cell.index = indexPath.row
+            if let image = setting.imageHeader {
+                cell.imgHeadDetail.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
+            }
+            return cell
+            
         } else {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: BottomDetailCell.identifier, for: indexPath) as! BottomDetailCell
             cell.txSubSetting.text = setting.subSetting
@@ -129,12 +134,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewSetting.reloadData() // way check with don't value this is value >> same on code is don't is false
     }
     
+    func btnMoreDetailDidTapped(index:Int) {
+        clearIndex()
+        dataSetting[index].defaultDetail = !(dataSetting[index].defaultDetail ?? false)
+        tableViewSetting.reloadData()
+    }
+    
     func clearIndex() { // func set fix clear value of index when press and use in btnMore
         for i in 0 ... (dataSetting.count - 1) {
             dataSetting[i].defaultDetail = false
         }
     }
-        
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let setting = dataSetting[indexPath.row]
         switch setting.typeSetting {
@@ -147,6 +158,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case .bottomDetailCell:
             return 60
         case .cardSettingCell:
+            return UITableView.automaticDimension
+        case .cardDetailSettingCell:
             return UITableView.automaticDimension
         }
     }
