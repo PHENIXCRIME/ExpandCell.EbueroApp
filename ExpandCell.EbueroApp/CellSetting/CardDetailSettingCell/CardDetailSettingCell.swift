@@ -18,7 +18,7 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var tableViewDetail: UITableView!
     
-    public var dataSetting: [SettingData] = []
+    public var subSettingData: [SettingData] = []
     
     var index: Int = 0
 
@@ -42,6 +42,7 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
         registerCell()
+        setSubDetail()
         tableViewDetail.reloadData()
     }
     
@@ -64,14 +65,30 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         let bottomDetailCell = UINib(nibName: "BottomDetailCell", bundle: Bundle.main)
         tableViewDetail.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
     }
+    
+    func setSubDetail() {
+        subSettingData = [SettingData(subSetting: "Greeting", typeSetting: .bottomDetailCell),
+                      SettingData(subSetting: "Instructions", typeSetting: .bottomDetailCell),
+                      SettingData(subSetting: "Message to Secretary", typeSetting: .bottomDetailCell)
+        ]
+    }
+    
+    
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return subSettingData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let subSettingCell = subSettingData[indexPath.row]
+        let cell = tableViewDetail.dequeueReusableCell(withIdentifier: BottomDetailCell.identifier, for: indexPath) as! BottomDetailCell
+        cell.txSubSetting.text = subSettingCell.subSetting
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
 
