@@ -11,18 +11,21 @@ protocol cardDetailSettingCellDelegate {
     func btnMoreDidTapped(index:Int)
 }
 
-class CardDetailSettingCell: UITableViewCell {
+class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var imgHeadDetail: UIImageView!
     @IBOutlet weak var txDetail: UILabel!
     @IBOutlet weak var btnMore: UIButton!
     @IBOutlet weak var tableViewDetail: UITableView!
     
+    public var dataSetting: [SettingData] = []
+    
     var index: Int = 0
-    
+
     var delegate: cardDetailSettingCellDelegate?
-    
+
     static let identifier = "cardDetailSettingCell"
-    
+
     static func nib() ->UINib {
         return UINib(nibName: "cardDetailSettingCell", bundle: nil)
     }
@@ -35,9 +38,41 @@ class CardDetailSettingCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupView()
+        registerCell()
+        tableViewDetail.reloadData()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     @IBAction func btnMore(_ sender: Any) {
         delegate?.btnMoreDidTapped(index: index)
     }
     
+    func setupView() {
+        tableViewDetail.delegate = self
+        tableViewDetail.dataSource = self
+        tableViewDetail.separatorStyle = .none
+        tableViewDetail.rowHeight = UITableView.automaticDimension
+    }
     
+    func registerCell() {
+        let bottomDetailCell = UINib(nibName: "BottomDetailCell", bundle: Bundle.main)
+        tableViewDetail.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
+    }
+
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+
 }
