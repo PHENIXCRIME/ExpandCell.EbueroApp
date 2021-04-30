@@ -73,9 +73,6 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         ]
     }
     
-    
-
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subSettingData.count
     }
@@ -91,5 +88,4 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         return UITableView.automaticDimension
     }
     
-
 }
