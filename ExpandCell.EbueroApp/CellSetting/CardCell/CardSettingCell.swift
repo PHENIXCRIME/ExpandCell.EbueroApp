@@ -9,7 +9,7 @@ import UIKit
 protocol cardDetailSettingDelegate {
     func btnMoreDidTapped(index:Int)
 }
-class CardDetailSetting: UITableViewCell {
+class CardSettingCell: UITableViewCell {
     @IBOutlet weak var imgHeader: UIImageView!
     @IBOutlet weak var txDetailHeader: UILabel!
     @IBOutlet weak var btnMore: UIButton!
@@ -18,10 +18,10 @@ class CardDetailSetting: UITableViewCell {
     
     var delegate: cardDetailSettingDelegate?
     
-    static let identifier = "cardDetailSetting"
+    static let identifier = "cardSettingCell"
     
     static func nib() ->UINib {
-        return UINib(nibName: "cardDetailSetting", bundle: nil)
+        return UINib(nibName: "cardSettingCell", bundle: nil)
     }
 
     override func awakeFromNib() {

@@ -23,8 +23,8 @@
 		66C00C6B2631577600D6D0FE /* HeaderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C00C692631577600D6D0FE /* HeaderDetailCell.xib */; };
 		66C00C6F2631578C00D6D0FE /* BottomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C00C6D2631578C00D6D0FE /* BottomDetailCell.swift */; };
 		66C00C702631578C00D6D0FE /* BottomDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C00C6E2631578C00D6D0FE /* BottomDetailCell.xib */; };
-		66C87F772636ADA200CC9909 /* CardDetailSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C87F752636ADA200CC9909 /* CardDetailSetting.swift */; };
-		66C87F782636ADA200CC9909 /* CardDetailSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C87F762636ADA200CC9909 /* CardDetailSetting.xib */; };
+		66C87F772636ADA200CC9909 /* CardSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C87F752636ADA200CC9909 /* CardSettingCell.swift */; };
+		66C87F782636ADA200CC9909 /* CardSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C87F762636ADA200CC9909 /* CardSettingCell.xib */; };
 		66D6486A263AC3AE002693A5 /* CardDetailSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */; };
 		66D6486B263AC3AE002693A5 /* CardDetailSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */; };
 /* End PBXBuildFile section */
@@ -48,8 +48,8 @@
 		66C00C692631577600D6D0FE /* HeaderDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderDetailCell.xib; sourceTree = "<group>"; };
 		66C00C6D2631578C00D6D0FE /* BottomDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailCell.swift; sourceTree = "<group>"; };
 		66C00C6E2631578C00D6D0FE /* BottomDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomDetailCell.xib; sourceTree = "<group>"; };
-		66C87F752636ADA200CC9909 /* CardDetailSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailSetting.swift; sourceTree = "<group>"; };
-		66C87F762636ADA200CC9909 /* CardDetailSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailSetting.xib; sourceTree = "<group>"; };
+		66C87F752636ADA200CC9909 /* CardSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSettingCell.swift; sourceTree = "<group>"; };
+		66C87F762636ADA200CC9909 /* CardSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardSettingCell.xib; sourceTree = "<group>"; };
 		66D64868263AC3AE002693A5 /* CardDetailSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailSettingCell.swift; sourceTree = "<group>"; };
 		66D64869263AC3AE002693A5 /* CardDetailSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailSettingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,8 +150,8 @@
 		66C87F7A2636ADA700CC9909 /* CardCell */ = {
 			isa = PBXGroup;
 			children = (
-				66C87F752636ADA200CC9909 /* CardDetailSetting.swift */,
-				66C87F762636ADA200CC9909 /* CardDetailSetting.xib */,
+				66C87F752636ADA200CC9909 /* CardSettingCell.swift */,
+				66C87F762636ADA200CC9909 /* CardSettingCell.xib */,
 			);
 			path = CardCell;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 			files = (
 				66387FD62632C592000B5BF1 /* AboutSettingCell.xib in Resources */,
 				66D6486B263AC3AE002693A5 /* CardDetailSettingCell.xib in Resources */,
-				66C87F782636ADA200CC9909 /* CardDetailSetting.xib in Resources */,
+				66C87F782636ADA200CC9909 /* CardSettingCell.xib in Resources */,
 				66C00C6B2631577600D6D0FE /* HeaderDetailCell.xib in Resources */,
 				669DD9892630256000A67963 /* LaunchScreen.storyboard in Resources */,
 				669DD9862630256000A67963 /* Assets.xcassets in Resources */,
@@ -251,7 +251,7 @@
 				669DD97A2630255E00A67963 /* AppDelegate.swift in Sources */,
 				669DD97C2630255E00A67963 /* SceneDelegate.swift in Sources */,
 				66387FD52632C592000B5BF1 /* AboutSettingCell.swift in Sources */,
-				66C87F772636ADA200CC9909 /* CardDetailSetting.swift in Sources */,
+				66C87F772636ADA200CC9909 /* CardSettingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
