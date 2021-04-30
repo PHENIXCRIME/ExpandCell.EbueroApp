@@ -12,7 +12,7 @@ public enum TypeSetting {
     case settingCell
     case headerDetailCell
     case bottomDetailCell
-    case cardDetailSettingCell
+    case cardSettingCell
 }
 
 public struct SettingData {
