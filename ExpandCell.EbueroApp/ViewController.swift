@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, cardDetailSettingDelegate{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, cardDetailSettingDelegate ,cardDetailSettingCellDelegate {
     
     @IBOutlet weak var tableViewSetting: UITableView!
     
