@@ -8,15 +8,16 @@
 import UIKit
 
 protocol cardDetailSettingCellDelegate {
-    func btnMoreDidTapped(index:Int)
+    func btnMoreDetailDidTapped(index:Int)
 }
 
 class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var imgHeadDetail: UIImageView!
     @IBOutlet weak var txDetail: UILabel!
-    @IBOutlet weak var btnMore: UIButton!
+    @IBOutlet weak var btnMoreDetail: UIButton!
     @IBOutlet weak var tableViewDetail: UITableView!
+    @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
     public var subSettingData: [SettingData] = []
     
@@ -32,26 +33,17 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
 
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
         registerCell()
         setSubDetail()
         tableViewDetail.reloadData()
+        tableViewDetail.estimatedRowHeight = UITableView.automaticDimension
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    
     
     @IBAction func btnMore(_ sender: Any) {
-        delegate?.btnMoreDidTapped(index: index)
+        delegate?.btnMoreDetailDidTapped(index: index)
     }
     
     func setupView() {
@@ -85,7 +77,9 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return 60
     }
+    
+    
     
 }
