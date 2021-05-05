@@ -8,6 +8,17 @@
 import UIKit
 
 class CardSettingDetailCell: UITableViewCell {
+    
+    @IBOutlet weak var imgCard: UIImageView!
+    @IBOutlet weak var txSettingDetail: UILabel!
+    @IBOutlet weak var btnMoreDetail: UIButton!
+    @IBOutlet weak var tableViewMenuCard: SettingTableView!
+    
+    static let identifier = "cardSettingDetailCell"
+
+    static func nib() ->UINib {
+        return UINib(nibName: "CardSettingDetailCell", bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
