@@ -1,5 +1,5 @@
 //
-//  MenuCardDetailCell.swift
+//  MenuCardSettingDetailCell.swift
 //  ExpandCell.EbueroApp
 //
 //  Created by PHENIXCRIME on 5/5/2564 BE.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuCardDetailCell: UITableViewCell {
+class MenuCardSettingDetailCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

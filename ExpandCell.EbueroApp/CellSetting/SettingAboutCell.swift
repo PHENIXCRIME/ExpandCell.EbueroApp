@@ -1,5 +1,5 @@
 //
-//  CardDetailCell.swift
+//  SettingAboutCell.swift
 //  ExpandCell.EbueroApp
 //
 //  Created by PHENIXCRIME on 5/5/2564 BE.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CardDetailCell: UITableViewCell {
+class SettingAboutCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
