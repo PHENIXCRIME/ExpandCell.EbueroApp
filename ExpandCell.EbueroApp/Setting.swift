@@ -25,19 +25,21 @@ public struct SettingData {
     public let fullDetail: String?
     public var defaultDetail: Bool?
     public let subSetting: String?
+    public let subSettingMenu: [String]?
     public let typeSetting: TypeSetting
     
     init(about: String?=nil, icon: String?=nil, textSetting: String?=nil, imageHeader: String?=nil,
          previewDetail: String?=nil,fullDetail: String?=nil, defaultDetail: Bool?=nil,
-         subSetting: String?=nil, typeSetting: TypeSetting) {
+         subSetting: String?=nil, subSettingMenu: [String]?=nil,typeSetting: TypeSetting) {
         self.about = about
         self.icon = icon
         self.textSetting = textSetting
         self.imageHeader = imageHeader
-        self.previewDetail = previewDetail 
+        self.previewDetail = previewDetail
         self.fullDetail = fullDetail
         self.defaultDetail = defaultDetail
         self.subSetting = subSetting
+        self.subSettingMenu = subSettingMenu
         self.typeSetting = typeSetting
     }
 }
