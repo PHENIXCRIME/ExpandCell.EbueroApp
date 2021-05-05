@@ -16,15 +16,16 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var imgHeadDetail: UIImageView!
     @IBOutlet weak var txDetail: UILabel!
     @IBOutlet weak var btnMoreDetail: UIButton!
-    @IBOutlet weak var tableViewDetail: UITableView!
+    @IBOutlet weak var tableViewDetail: SettingTableView!
+    
     @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
-    public var subSettingData: [SettingData] = []
+    public var subSettingData: SettingData?
     
     var index: Int = 0
 
     var delegate: cardDetailSettingCellDelegate?
-
+    
     static let identifier = "cardDetailSettingCell"
 
     static func nib() ->UINib {
@@ -35,12 +36,9 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         super.awakeFromNib()
         setupView()
         registerCell()
-        setSubDetail()
-        tableViewDetail.reloadData()
-        tableViewDetail.estimatedRowHeight = UITableView.automaticDimension
+        tableViewDetail.estimatedRowHeight = 300
+        tableViewDetail.rowHeight = UITableView.automaticDimension
     }
-    
-    
     
     @IBAction func btnMore(_ sender: Any) {
         delegate?.btnMoreDetailDidTapped(index: index)
@@ -57,29 +55,36 @@ class CardDetailSettingCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         let bottomDetailCell = UINib(nibName: "BottomDetailCell", bundle: Bundle.main)
         tableViewDetail.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
     }
+
     
-    func setSubDetail() {
-        subSettingData = [SettingData(subSetting: "Greeting", typeSetting: .bottomDetailCell),
-                      SettingData(subSetting: "Instructions", typeSetting: .bottomDetailCell),
-                      SettingData(subSetting: "Message to Secretary", typeSetting: .bottomDetailCell)
-        ]
+    func prepareCell(subSetting:SettingData) {
+        subSettingData = subSetting
+        adjustTableView()
+    }
+    
+    func adjustTableView() {
+        let totalCell:Int = subSettingData?.subSettingMenu?.count ?? 0
+        let heightSubSetting:Int = 60
+        let heightTableViewSubSetting = totalCell * heightSubSetting
+        DispatchQueue.main.async {
+            self.tableViewDetail.reloadData()
+            self.heightTableView.constant = CGFloat(heightTableViewSubSetting)
+            self.layoutIfNeeded()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subSettingData.count
+        return subSettingData?.subSettingMenu?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let subSettingCell = subSettingData[indexPath.row]
+        let subSettingCell = subSettingData?.subSettingMenu?[indexPath.row]
         let cell = tableViewDetail.dequeueReusableCell(withIdentifier: BottomDetailCell.identifier, for: indexPath) as! BottomDetailCell
-        cell.txSubSetting.text = subSettingCell.subSetting
+        cell.txSubSetting.text = subSettingCell
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
-    
-    
 }
