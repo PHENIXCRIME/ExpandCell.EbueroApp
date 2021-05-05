@@ -67,21 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.txAboutSetting.text = setting.about
             return cell
             
-        }  else if setting.typeSetting == .cardSettingCell {
-            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardSettingCell.identifier, for: indexPath) as! CardSettingCell
-            cell.delegate = self
-            if setting.defaultDetail == false {
-                cell.txDetailHeader.text = setting.previewDetail
-            } else {
-                cell.txDetailHeader.text = setting.fullDetail
-            }
-            cell.index = indexPath.row
-            if let image = setting.imageHeader {
-                cell.imgHeader.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
-            }
-            return cell
-            
-        }  else if setting.typeSetting == .settingCell {
+        } else if setting.typeSetting == .settingCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingCell.identifier, for: indexPath) as! SettingCell
             cell.txSetting.text = setting.textSetting
             if let icon = setting.icon {
@@ -151,11 +137,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case .aboutSettingCell:
             return 35
         case .settingCell:
-            return 70
+            return 60
         case .headerDetailCell:
             return 160
         case .bottomDetailCell:
-            return 60
+            return 40
         case .cardSettingCell:
             return UITableView.automaticDimension
         case .cardDetailSettingCell:
