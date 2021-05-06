@@ -13,6 +13,7 @@ class CardSettingDetailCell: UITableViewCell {
     @IBOutlet weak var txSettingDetail: UILabel!
     @IBOutlet weak var btnMoreDetail: UIButton!
     @IBOutlet weak var tableViewMenuCard: SettingTableView!
+    @IBOutlet weak var heightTableView: NSLayoutConstraint!
     
     static let identifier = "cardSettingDetailCell"
 

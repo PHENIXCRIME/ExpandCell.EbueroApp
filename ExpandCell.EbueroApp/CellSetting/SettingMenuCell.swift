@@ -9,7 +9,7 @@ import UIKit
 
 class SettingMenuCell: UITableViewCell {
     @IBOutlet weak var viewSettingCell: UIView!
-    @IBOutlet weak var imgIconSeting: UIImage!
+    @IBOutlet weak var imgIconSetting: UIImageView!
     @IBOutlet weak var txSetting: UILabel!
     @IBOutlet weak var btnExpanable: UIButton!
     

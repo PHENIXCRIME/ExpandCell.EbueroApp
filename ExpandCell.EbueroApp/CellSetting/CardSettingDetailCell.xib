@@ -62,6 +62,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="afi-iy-Q3L"/>
+            <connections>
+                <outlet property="btnMoreDetail" destination="Ss5-qa-hY8" id="YB6-uX-2Q1"/>
+                <outlet property="heightTableView" destination="mip-7i-9rH" id="euq-SB-oCU"/>
+                <outlet property="imgCard" destination="52A-12-PbL" id="h1Y-bt-7O9"/>
+                <outlet property="tableViewMenuCard" destination="fFA-17-3aY" id="uKH-nV-KiD"/>
+                <outlet property="txSettingDetail" destination="OnQ-8L-2ZT" id="qqk-cY-zk6"/>
+            </connections>
             <point key="canvasLocation" x="138" y="-148"/>
         </tableViewCell>
     </objects>

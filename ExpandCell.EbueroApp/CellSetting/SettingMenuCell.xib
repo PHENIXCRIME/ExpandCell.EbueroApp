@@ -65,6 +65,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="SM8-1k-EqW"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnExpanable" destination="9Ft-hQ-Qd9" id="sRk-VS-T2e"/>
+                <outlet property="imgIconSetting" destination="k50-GT-Mmf" id="4Ft-Y5-B5f"/>
+                <outlet property="txSetting" destination="NDs-4N-zXl" id="dKh-D2-pUg"/>
+                <outlet property="viewSettingCell" destination="JnV-tq-GtQ" id="mnJ-LP-AZd"/>
+            </connections>
             <point key="canvasLocation" x="282.60869565217394" y="39.508928571428569"/>
         </tableViewCell>
     </objects>

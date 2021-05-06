@@ -55,6 +55,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="AcR-wU-6Up"/>
+            <connections>
+                <outlet property="txMenuCard" destination="x2z-b9-QU2" id="Q7d-Zy-CkY"/>
+                <outlet property="viewMenuCard" destination="j9T-gL-rN6" id="Yt8-Vi-BwV"/>
+            </connections>
             <point key="canvasLocation" x="248" y="92"/>
         </tableViewCell>
     </objects>
