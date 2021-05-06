@@ -8,12 +8,19 @@
 import Foundation
 
 public enum TypeSetting {
+    /* old version */
     case aboutSettingCell
     case settingCell
     case headerDetailCell
     case bottomDetailCell
     case cardSettingCell
     case cardDetailSettingCell
+    
+    /* new version */
+    case settingMenuCell
+    case cardSettingDetailCell
+    case menuCardSettingDetailCell
+    case settingAboutCell
 }
 
 public struct SettingData {
