@@ -31,6 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func registerCell() {
+        
+        /* old cell */
         let aboutSettingCell = UINib(nibName: "AboutSettingCell", bundle: Bundle.main)
         let settingCell = UINib(nibName: "SettingCell", bundle: Bundle.main)
         let headerDetailCell = UINib(nibName: "HeaderDetailCell", bundle: Bundle.main)
@@ -44,6 +46,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableViewSetting.register(bottomDetailCell, forCellReuseIdentifier: "bottomDetailCell")
         tableViewSetting.register(cardSettingCell, forCellReuseIdentifier: "cardSettingCell")
         tableViewSetting.register(cardDetailSettingCell, forCellReuseIdentifier: "cardDetailSettingCell")
+        
+        /* new cell */
+        let settingMenuCell = UINib(nibName: "SettingMenuCell", bundle: Bundle.main)
+        let cardSettingDetailCell = UINib(nibName: "CardSettingDetailCell", bundle: Bundle.main)
+        let menuCardSettingdetailCell = UINib(nibName: "MenuCardSettingDetailCell", bundle: Bundle.main)
+        let settingAboutCell = UINib(nibName: "SettingAboutCell", bundle: Bundle.main)
+        
+        tableViewSetting.register(settingMenuCell, forCellReuseIdentifier: "settingMenuCell")
+        tableViewSetting.register(cardSettingDetailCell, forCellReuseIdentifier: "cardSettingDetailCell")
+        tableViewSetting.register(menuCardSettingdetailCell, forCellReuseIdentifier: "menuCardSettingdetailCell")
+        tableViewSetting.register(settingAboutCell, forCellReuseIdentifier: "settingAboutCell")
+        
     }
     
     func setTypeSetting() {

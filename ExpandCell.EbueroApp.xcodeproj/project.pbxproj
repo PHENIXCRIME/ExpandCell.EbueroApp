@@ -124,6 +124,17 @@
 			path = SettingAboutCell;
 			sourceTree = "<group>";
 		};
+		6654982B2643D13D00E47B32 /* NewVersionCell */ = {
+			isa = PBXGroup;
+			children = (
+				665498272643D0A800E47B32 /* SettingMenuCell */,
+				665498282643D0CA00E47B32 /* CardSettingDetailCell */,
+				665498292643D0D600E47B32 /* MenuCardSettingDetailCell */,
+				6654982A2643D0E100E47B32 /* SettingAboutCell */,
+			);
+			path = NewVersionCell;
+			sourceTree = "<group>";
+		};
 		669DD96D2630255E00A67963 = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +177,7 @@
 				66387FD82632C598000B5BF1 /* AboutCell */,
 				66C87F7A2636ADA700CC9909 /* CardCell */,
 				66D6486C263AC45A002693A5 /* CardDetailSettingCell */,
-				665498272643D0A800E47B32 /* SettingMenuCell */,
-				665498282643D0CA00E47B32 /* CardSettingDetailCell */,
-				665498292643D0D600E47B32 /* MenuCardSettingDetailCell */,
-				6654982A2643D0E100E47B32 /* SettingAboutCell */,
+				6654982B2643D13D00E47B32 /* NewVersionCell */,
 			);
 			path = CellSetting;
 			sourceTree = "<group>";
