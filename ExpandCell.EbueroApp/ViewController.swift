@@ -148,6 +148,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let setting = dataSetting[indexPath.row]
         switch setting.typeSetting {
+        /* old version */
+
         case .aboutSettingCell:
             return 35
         case .settingCell:
@@ -159,6 +161,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case .cardSettingCell:
             return UITableView.automaticDimension
         case .cardDetailSettingCell:
+            return UITableView.automaticDimension
+            
+        /* new version */
+        case .settingMenuCell:
+            return UITableView.automaticDimension
+        case .cardSettingDetailCell:
+            return UITableView.automaticDimension
+        case .menuCardSettingDetailCell:
+            return UITableView.automaticDimension
+        case .settingAboutCell:
             return UITableView.automaticDimension
         }
     }
