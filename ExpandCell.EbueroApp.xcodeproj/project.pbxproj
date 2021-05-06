@@ -88,6 +88,42 @@
 			path = AboutCell;
 			sourceTree = "<group>";
 		};
+		665498272643D0A800E47B32 /* SettingMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				665498072642A27300E47B32 /* SettingMenuCell.swift */,
+				665498082642A27300E47B32 /* SettingMenuCell.xib */,
+			);
+			path = SettingMenuCell;
+			sourceTree = "<group>";
+		};
+		665498282643D0CA00E47B32 /* CardSettingDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				6654981B2642AFC900E47B32 /* CardSettingDetailCell.swift */,
+				6654981C2642AFC900E47B32 /* CardSettingDetailCell.xib */,
+			);
+			path = CardSettingDetailCell;
+			sourceTree = "<group>";
+		};
+		665498292643D0D600E47B32 /* MenuCardSettingDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				6654981F2642AFF600E47B32 /* MenuCardSettingDetailCell.swift */,
+				665498202642AFF600E47B32 /* MenuCardSettingDetailCell.xib */,
+			);
+			path = MenuCardSettingDetailCell;
+			sourceTree = "<group>";
+		};
+		6654982A2643D0E100E47B32 /* SettingAboutCell */ = {
+			isa = PBXGroup;
+			children = (
+				665498232642B02300E47B32 /* SettingAboutCell.swift */,
+				665498242642B02300E47B32 /* SettingAboutCell.xib */,
+			);
+			path = SettingAboutCell;
+			sourceTree = "<group>";
+		};
 		669DD96D2630255E00A67963 = {
 			isa = PBXGroup;
 			children = (
@@ -130,14 +166,10 @@
 				66387FD82632C598000B5BF1 /* AboutCell */,
 				66C87F7A2636ADA700CC9909 /* CardCell */,
 				66D6486C263AC45A002693A5 /* CardDetailSettingCell */,
-				665498072642A27300E47B32 /* SettingMenuCell.swift */,
-				665498082642A27300E47B32 /* SettingMenuCell.xib */,
-				6654981B2642AFC900E47B32 /* CardSettingDetailCell.swift */,
-				6654981C2642AFC900E47B32 /* CardSettingDetailCell.xib */,
-				6654981F2642AFF600E47B32 /* MenuCardSettingDetailCell.swift */,
-				665498202642AFF600E47B32 /* MenuCardSettingDetailCell.xib */,
-				665498232642B02300E47B32 /* SettingAboutCell.swift */,
-				665498242642B02300E47B32 /* SettingAboutCell.xib */,
+				665498272643D0A800E47B32 /* SettingMenuCell */,
+				665498282643D0CA00E47B32 /* CardSettingDetailCell */,
+				665498292643D0D600E47B32 /* MenuCardSettingDetailCell */,
+				6654982A2643D0E100E47B32 /* SettingAboutCell */,
 			);
 			path = CellSetting;
 			sourceTree = "<group>";
