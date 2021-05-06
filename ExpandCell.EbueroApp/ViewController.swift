@@ -106,9 +106,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             return cell
             
-        } else {
+        } else if setting.typeSetting == .bottomDetailCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: BottomDetailCell.identifier, for: indexPath) as! BottomDetailCell
             cell.txSubSetting.text = setting.subSetting
+            return cell
+        } else if setting.typeSetting == .settingMenuCell {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingMenuCell.identifier, for: indexPath) as! SettingMenuCell
+            return cell
+        } else if setting.typeSetting == .cardSettingDetailCell {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardSettingDetailCell.identifier, for: indexPath) as! CardSettingDetailCell
+            return cell
+        } else if setting.typeSetting == .menuCardSettingDetailCell {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: MenuCardSettingDetailCell.identifier, for: indexPath) as! MenuCardSettingDetailCell
+            return cell
+        } else {
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingAboutCell.identifier, for: indexPath) as! SettingAboutCell
             return cell
         }
     }
