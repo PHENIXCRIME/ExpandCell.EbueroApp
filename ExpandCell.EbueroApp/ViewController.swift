@@ -110,17 +110,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: BottomDetailCell.identifier, for: indexPath) as! BottomDetailCell
             cell.txSubSetting.text = setting.subSetting
             return cell
+            
+            /* new version*/
+            
         } else if setting.typeSetting == .settingMenuCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingMenuCell.identifier, for: indexPath) as! SettingMenuCell
+            cell.txSetting.text = setting.textSetting
+            if let icon = setting.icon {
+                cell.imgIconSetting.image = UIImage(named: icon)?.withRenderingMode(.alwaysTemplate)
+            }
+            cell.imgIconSetting.tintColor = .black
             return cell
         } else if setting.typeSetting == .cardSettingDetailCell {
-            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardSettingDetailCell.identifier, for: indexPath) as! CardSettingDetailCell
+            let cell = tableViewSetting.dequeueReusableCell(withIdentifier: CardSettingDetailCell.identifier, for: indexPath) as!
+                CardSettingDetailCell
+            
+            
             return cell
         } else if setting.typeSetting == .menuCardSettingDetailCell {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: MenuCardSettingDetailCell.identifier, for: indexPath) as! MenuCardSettingDetailCell
+            cell.txMenuCard.text = setting.subSetting
             return cell
         } else {
             let cell = tableViewSetting.dequeueReusableCell(withIdentifier: SettingAboutCell.identifier, for: indexPath) as! SettingAboutCell
+            cell.txSettingAbout.text = setting.about
             return cell
         }
     }
